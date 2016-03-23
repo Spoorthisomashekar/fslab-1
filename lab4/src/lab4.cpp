@@ -17,7 +17,7 @@ class student
 		string name,USN,branch;
 		int sem;
 public: string buffer;
-		void ReadStudentFromConsole()
+		void ReadStudent()
 		{
 			cin.clear();
 			cin.ignore(255,'\n');
@@ -133,10 +133,8 @@ int main()
 		cin>>choice;
 		switch(choice)
 		{
-		case 1: S.ReadStudentFromConsole();
+		case 1: S.ReadStudent();
 			    fp.open("data.txt",ios::out|ios::app);
-			    if(!fp)
-			    	error(1);
 			    S.pack();
 			    fp.close();
 			    break;
